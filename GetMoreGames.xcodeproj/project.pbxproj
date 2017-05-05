@@ -89,6 +89,9 @@
 		6285C82B1EBD234E001130EF /* GetMoreGames */ = {
 			isa = PBXGroup;
 			children = (
+				6285C8511EBD2F4F001130EF /* Model */,
+				6285C8501EBD2F3E001130EF /* ViewModel */,
+				6285C84F1EBD2F14001130EF /* View */,
 				6285C82C1EBD234E001130EF /* AppDelegate.swift */,
 				6285C82E1EBD234E001130EF /* ViewController.swift */,
 				6285C8301EBD234E001130EF /* Main.storyboard */,
@@ -106,6 +109,27 @@
 				6285C8461EBD24C9001130EF /* Info.plist */,
 			);
 			path = GetMoreGamesTests;
+			sourceTree = "<group>";
+		};
+		6285C84F1EBD2F14001130EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6285C8501EBD2F3E001130EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6285C8511EBD2F4F001130EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BF10B63446B870BE563F2654 /* Pods */ = {
@@ -545,6 +569,7 @@
 				6285C83D1EBD234E001130EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6285C8491EBD24C9001130EF /* Build configuration list for PBXNativeTarget "GetMoreGamesTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +578,7 @@
 				6285C84B1EBD24C9001130EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
