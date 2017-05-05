@@ -7,6 +7,8 @@ target 'GetMoreGames' do
   
   pod 'Moya', '~> 8.0'
   pod 'SwiftyJSON', '~> 3.1'
+  pod 'Cartography', '~> 1.1'
+
 end
 
 target 'GetMoreGamesTests' do
