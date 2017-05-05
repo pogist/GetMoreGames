@@ -9,6 +9,9 @@ target 'GetMoreGames' do
   pod 'SwiftyJSON', '~> 3.1'
   pod 'Cartography', '~> 1.1'
 
+  pod 'RxSwift', '~> 3.4'
+  pod 'RxCocoa', '~> 3.4'
+
 end
 
 target 'GetMoreGamesTests' do
