@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		41282D1DABCBC3AF91CBFC67 /* Pods_GetMoreGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A286B13A421B6A3B269F22C /* Pods_GetMoreGames.framework */; };
+		62495F0D1F9909D4002F66B1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */; };
+		62495F0F1F99160E002F66B1 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F0E1F99160E002F66B1 /* ViewControllerFactory.swift */; };
+		62495F151F993155002F66B1 /* UserProfile+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F141F993155002F66B1 /* UserProfile+Rx.swift */; };
 		6285C82D1EBD234E001130EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285C82C1EBD234E001130EF /* AppDelegate.swift */; };
 		6285C82F1EBD234E001130EF /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285C82E1EBD234E001130EF /* RegistrationViewController.swift */; };
 		6285C8321EBD234E001130EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6285C8301EBD234E001130EF /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		2A286B13A421B6A3B269F22C /* Pods_GetMoreGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetMoreGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		62495F0E1F99160E002F66B1 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		62495F141F993155002F66B1 /* UserProfile+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile+Rx.swift"; sourceTree = "<group>"; };
 		6285C8291EBD234E001130EF /* GetMoreGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetMoreGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6285C82C1EBD234E001130EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6285C82E1EBD234E001130EF /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62495F131F993145002F66B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62495F141F993155002F66B1 /* UserProfile+Rx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6285C8201EBD234E001130EF = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +113,7 @@
 		6285C82B1EBD234E001130EF /* GetMoreGames */ = {
 			isa = PBXGroup;
 			children = (
+				62495F131F993145002F66B1 /* Extensions */,
 				62DBDF641F98DF0A00AAD19C /* Xib */,
 				6285C8511EBD2F4F001130EF /* Model */,
 				6285C8501EBD2F3E001130EF /* ViewModel */,
@@ -124,6 +139,7 @@
 		6285C84F1EBD2F14001130EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				62495F0E1F99160E002F66B1 /* ViewControllerFactory.swift */,
 				62DBDF691F98DF9E00AAD19C /* Profile */,
 			);
 			path = View;
@@ -167,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				62DBDF6F1F98E0F500AAD19C /* ProfileNavigationViewModel.swift */,
+				62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -348,6 +365,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -364,6 +382,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -435,8 +454,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62495F0D1F9909D4002F66B1 /* ProfileViewModel.swift in Sources */,
+				62495F0F1F99160E002F66B1 /* ViewControllerFactory.swift in Sources */,
 				62DBDF6B1F98DFC000AAD19C /* ProfileViewController.swift in Sources */,
 				6285C82F1EBD234E001130EF /* RegistrationViewController.swift in Sources */,
+				62495F151F993155002F66B1 /* UserProfile+Rx.swift in Sources */,
 				62DBDF701F98E0F500AAD19C /* ProfileNavigationViewModel.swift in Sources */,
 				6285C82D1EBD234E001130EF /* AppDelegate.swift in Sources */,
 				62DBDF6D1F98DFCF00AAD19C /* ProfileNavigationController.swift in Sources */,

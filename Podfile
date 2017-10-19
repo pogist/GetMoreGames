@@ -14,6 +14,8 @@ target 'GetMoreGames' do
   pod 'FacebookCore', '~> 0.3'
   pod 'FacebookLogin', '~> 0.3'
   pod 'FacebookShare', '~> 0.3'
+
+  pod 'Kingfisher', '~> 4.1'
 end
 
 target 'GetMoreGamesTests' do

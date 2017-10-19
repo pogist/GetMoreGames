@@ -8,10 +8,19 @@
 
 import Foundation
 import RxSwift
+import FacebookCore
 
 struct ProfileNavigationViewModel {
+    
     func checkUserLoginState() -> Observable<Bool> {
-        //TODO: Implement real logic
-        return Observable<Bool>.just(false)
+        return Observable.create { observer in
+            let loginState = (AccessToken.current == nil) ? false : true
+            observer.onNext(loginState)
+            observer.onCompleted()
+            
+            return Disposables.create()
+        }
+        .subscribeOn(MainScheduler.asyncInstance)
+        .observeOn(MainScheduler.instance)
     }
 }

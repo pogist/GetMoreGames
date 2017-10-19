@@ -20,20 +20,16 @@ class ProfileNavigationController: UINavigationController {
         
         profileNavigationViewModel
             .checkUserLoginState()
-            .subscribe(onNext: presentNextView, onError: errorHandler)
+            .subscribe(onNext: presentNextView)
             .disposed(by: disposeBag)
     }
     
     func presentNextView(basedOn userLoginState: Bool) {
         //endhud
         let nextViewController = (userLoginState)
-            ? ProfileViewController(nibName: "ProfileScreen", bundle: Bundle.main)
-            : RegistrationViewController(nibName: "RegistrationScreen", bundle: Bundle.main)
+            ? ProfileViewController.create()
+            : RegistrationViewController.create()
         
-        self.setViewControllers([nextViewController], animated: true)
-    }
-    
-    func errorHandler(error: Error) {
-        //TODO
+        self.setViewControllers([nextViewController], animated: false)
     }
 }
