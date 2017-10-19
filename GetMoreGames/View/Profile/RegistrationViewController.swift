@@ -8,18 +8,23 @@
 
 import UIKit
 import Cartography
+import FacebookLogin
 
 class RegistrationViewController: UIViewController {
-
-    @IBOutlet weak var welcomeLabel: UILabel!
+    var loginButton: LoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        renderFacebookLoginButton()
+    }
+    
+    func renderFacebookLoginButton() {
+        loginButton = LoginButton(readPermissions: [.publicProfile, .email, .userLocation])
+        view.addSubview(loginButton)
         
-        constrain(welcomeLabel) { view in
-            view.width == view.superview!.width/2
-            view.height == 21
-            view.center == view.superview!.center
+        constrain(loginButton) { view in
+            view.centerX == view.superview!.centerX
+            view.bottomMargin == view.superview!.bottomMargin - 40
         }
     }
 }
