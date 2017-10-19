@@ -11,6 +11,9 @@ target 'GetMoreGames' do
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
 
+  pod 'FacebookCore', '~> 0.3'
+  pod 'FacebookLogin', '~> 0.3'
+  pod 'FacebookShare', '~> 0.3'
 end
 
 target 'GetMoreGamesTests' do
