@@ -6,16 +6,15 @@ target 'GetMoreGames' do
   use_frameworks!
   
   pod 'Moya', '~> 9.0'
-  pod 'SwiftyJSON', '~> 3.1'
-  pod 'Cartography', '~> 1.1'
+  pod 'Cartography', '~> 2.1'
 
-  pod 'RxSwift', '~> 3.4'
-  pod 'RxCocoa', '~> 3.4'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
 
 end
 
 target 'GetMoreGamesTests' do
   use_frameworks!
 
-  pod 'Quick', '~> 1.1'
+  pod 'Quick', '~> 1.2'
 end
