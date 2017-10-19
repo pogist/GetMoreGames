@@ -5,7 +5,7 @@ target 'GetMoreGames' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   
-  pod 'Moya', '~> 8.0'
+  pod 'Moya', '~> 9.0'
   pod 'SwiftyJSON', '~> 3.1'
   pod 'Cartography', '~> 1.1'
 

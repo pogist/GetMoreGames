@@ -1,29 +1,36 @@
 PODS:
-  - Alamofire (4.4.0)
+  - Alamofire (4.5.1)
   - Cartography (1.1.0)
-  - Moya (8.0.3):
-    - Moya/Core (= 8.0.3)
-  - Moya/Core (8.0.3):
+  - Moya (9.0.0):
+    - Moya/Core (= 9.0.0)
+  - Moya/Core (9.0.0):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Quick (1.1.0)
-  - Result (3.2.1)
+  - Result (3.2.4)
+  - RxCocoa (3.6.1):
+    - RxSwift (~> 3.6)
+  - RxSwift (3.6.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Cartography (~> 1.1)
-  - Moya (~> 8.0)
+  - Moya (~> 9.0)
   - Quick (~> 1.1)
+  - RxCocoa (~> 3.4)
+  - RxSwift (~> 3.4)
   - SwiftyJSON (~> 3.1)
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Cartography: '0538ccb4044acbbda2266335fc58cb4228794d90'
-  Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Cartography: 0538ccb4044acbbda2266335fc58cb4228794d90
+  Moya: cf5e6ee93af526532f92614004b8ad2ea60fd845
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
+  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 8cfe2717a9213932ea036174faf46930a550a451
+PODFILE CHECKSUM: 02fe34d253714c7b8e5445c4f3b34d943ef0714a
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
