@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="703" y="-1084"/>
         </scene>
-        <!--Store-->
+        <!--Games-->
         <scene sceneID="Gd4-YR-f9W">
             <objects>
-                <viewController id="NOq-iP-TGX" sceneMemberID="viewController">
+                <viewController id="NOq-iP-TGX" customClass="GamesViewController" customModule="GetMoreGames" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dpe-3U-Jos"/>
                         <viewControllerLayoutGuide type="bottom" id="May-zr-B3y"/>
@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Store" image="store-icon" selectedImage="store-icon-selected" id="bn0-ta-puY"/>
+                    <tabBarItem key="tabBarItem" title="Games" image="store-icon" selectedImage="store-icon-selected" id="bn0-ta-puY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iny-Eg-0Kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

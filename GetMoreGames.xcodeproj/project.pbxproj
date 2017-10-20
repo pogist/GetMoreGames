@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41282D1DABCBC3AF91CBFC67 /* Pods_GetMoreGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A286B13A421B6A3B269F22C /* Pods_GetMoreGames.framework */; };
 		62389EA51F9A61EB005CA9D5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62389EA41F9A61EB005CA9D5 /* Profile.swift */; };
+		62389EA91F9A6888005CA9D5 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62389EA81F9A6888005CA9D5 /* GamesViewController.swift */; };
 		62495F0D1F9909D4002F66B1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */; };
 		62495F0F1F99160E002F66B1 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F0E1F99160E002F66B1 /* ViewControllerFactory.swift */; };
 		62495F151F993155002F66B1 /* UserProfile+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F141F993155002F66B1 /* UserProfile+Rx.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		2A286B13A421B6A3B269F22C /* Pods_GetMoreGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetMoreGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62389EA41F9A61EB005CA9D5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		62389EA81F9A6888005CA9D5 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		62495F0E1F99160E002F66B1 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		62495F141F993155002F66B1 /* UserProfile+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile+Rx.swift"; sourceTree = "<group>"; };
@@ -96,6 +98,22 @@
 				62389EA41F9A61EB005CA9D5 /* Profile.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		62389EA61F9A6841005CA9D5 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				62389EA71F9A6878005CA9D5 /* View */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		62389EA71F9A6878005CA9D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				62389EA81F9A6888005CA9D5 /* GamesViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		62495F131F993145002F66B1 /* Extensions */ = {
@@ -174,6 +192,7 @@
 		6285C82B1EBD234E001130EF /* GetMoreGames */ = {
 			isa = PBXGroup;
 			children = (
+				62389EA61F9A6841005CA9D5 /* Games */,
 				624E94B61F9A5B890003794D /* Base */,
 				624E94BD1F9A5FE70003794D /* Facebook */,
 				62DBDF6E1F98E0DE00AAD19C /* Profile */,
@@ -523,6 +542,7 @@
 				6285C82F1EBD234E001130EF /* RegistrationViewController.swift in Sources */,
 				62495F151F993155002F66B1 /* UserProfile+Rx.swift in Sources */,
 				62DBDF701F98E0F500AAD19C /* ProfileNavigationViewModel.swift in Sources */,
+				62389EA91F9A6888005CA9D5 /* GamesViewController.swift in Sources */,
 				6285C82D1EBD234E001130EF /* AppDelegate.swift in Sources */,
 				624E94C01F9A60250003794D /* Facebook.swift in Sources */,
 				62DBDF6D1F98DFCF00AAD19C /* ProfileNavigationController.swift in Sources */,

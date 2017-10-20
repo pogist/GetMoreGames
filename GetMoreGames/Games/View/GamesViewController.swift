@@ -6,4 +6,10 @@
 //  Copyright © 2017 Murilo da Paixão. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class GamesViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
