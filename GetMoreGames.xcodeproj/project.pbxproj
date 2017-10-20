@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		41282D1DABCBC3AF91CBFC67 /* Pods_GetMoreGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A286B13A421B6A3B269F22C /* Pods_GetMoreGames.framework */; };
+		62389EA51F9A61EB005CA9D5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62389EA41F9A61EB005CA9D5 /* Profile.swift */; };
 		62495F0D1F9909D4002F66B1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */; };
 		62495F0F1F99160E002F66B1 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F0E1F99160E002F66B1 /* ViewControllerFactory.swift */; };
 		62495F151F993155002F66B1 /* UserProfile+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F141F993155002F66B1 /* UserProfile+Rx.swift */; };
 		624E94B51F9A5ADD0003794D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624E94B41F9A5ADD0003794D /* R.generated.swift */; };
 		624E94B91F9A5BB90003794D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624E94B81F9A5BB90003794D /* ViewModel.swift */; };
+		624E94C01F9A60250003794D /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624E94BF1F9A60250003794D /* Facebook.swift */; };
 		6285C82D1EBD234E001130EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285C82C1EBD234E001130EF /* AppDelegate.swift */; };
 		6285C82F1EBD234E001130EF /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285C82E1EBD234E001130EF /* RegistrationViewController.swift */; };
 		6285C8321EBD234E001130EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6285C8301EBD234E001130EF /* Main.storyboard */; };
@@ -39,11 +41,13 @@
 
 /* Begin PBXFileReference section */
 		2A286B13A421B6A3B269F22C /* Pods_GetMoreGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetMoreGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62389EA41F9A61EB005CA9D5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		62495F0E1F99160E002F66B1 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		62495F141F993155002F66B1 /* UserProfile+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile+Rx.swift"; sourceTree = "<group>"; };
 		624E94B41F9A5ADD0003794D /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		624E94B81F9A5BB90003794D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		624E94BF1F9A60250003794D /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
 		6285C8291EBD234E001130EF /* GetMoreGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetMoreGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6285C82C1EBD234E001130EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6285C82E1EBD234E001130EF /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62389EA31F9A61DC005CA9D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62389EA41F9A61EB005CA9D5 /* Profile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		62495F131F993145002F66B1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +109,9 @@
 		624E94B61F9A5B890003794D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				624E94B71F9A5B9D0003794D /* ViewModel */,
 				62495F131F993145002F66B1 /* Extensions */,
 				6285C84F1EBD2F14001130EF /* View */,
-				624E94B71F9A5B9D0003794D /* ViewModel */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -120,6 +132,23 @@
 				62DBDF6C1F98DFCF00AAD19C /* ProfileNavigationController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		624E94BD1F9A5FE70003794D /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				62389EA31F9A61DC005CA9D5 /* Model */,
+				624E94BE1F9A60000003794D /* Network */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		624E94BE1F9A60000003794D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				624E94BF1F9A60250003794D /* Facebook.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		6285C8201EBD234E001130EF = {
@@ -146,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				624E94B61F9A5B890003794D /* Base */,
+				624E94BD1F9A5FE70003794D /* Facebook */,
 				62DBDF6E1F98E0DE00AAD19C /* Profile */,
 				6285C82C1EBD234E001130EF /* AppDelegate.swift */,
 				6285C8301EBD234E001130EF /* Main.storyboard */,
@@ -485,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				624E94B91F9A5BB90003794D /* ViewModel.swift in Sources */,
+				62389EA51F9A61EB005CA9D5 /* Profile.swift in Sources */,
 				62495F0D1F9909D4002F66B1 /* ProfileViewModel.swift in Sources */,
 				62495F0F1F99160E002F66B1 /* ViewControllerFactory.swift in Sources */,
 				624E94B51F9A5ADD0003794D /* R.generated.swift in Sources */,
@@ -493,6 +524,7 @@
 				62495F151F993155002F66B1 /* UserProfile+Rx.swift in Sources */,
 				62DBDF701F98E0F500AAD19C /* ProfileNavigationViewModel.swift in Sources */,
 				6285C82D1EBD234E001130EF /* AppDelegate.swift in Sources */,
+				624E94C01F9A60250003794D /* Facebook.swift in Sources */,
 				62DBDF6D1F98DFCF00AAD19C /* ProfileNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
