@@ -12,5 +12,21 @@ struct Profile: Codable {
     let id: String
     let name: String
     let email: String
-    let picture: URL
+    let picture: [String: Picture]
+    
+    struct Picture: Codable {
+        let isSilhouette: Bool
+        let url: URL
+        
+        enum CodingKeys: String, CodingKey {
+            case url
+            case isSilhouette = "is_silhouette"
+        }
+    }
+}
+
+extension Profile {
+    static func from(jsonData: Data) throws -> Profile {
+        return try JSONDecoder().decode(Profile.self, from: jsonData)
+    }
 }
