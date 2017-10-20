@@ -16,6 +16,7 @@ target 'GetMoreGames' do
   pod 'FacebookShare', '~> 0.3'
 
   pod 'Kingfisher', '~> 4.1'
+  pod 'R.swift', '~> 4.0'
 end
 
 target 'GetMoreGamesTests' do
