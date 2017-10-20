@@ -97,6 +97,8 @@
 		624E94B61F9A5B890003794D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				62495F131F993145002F66B1 /* Extensions */,
+				6285C84F1EBD2F14001130EF /* View */,
 				624E94B71F9A5B9D0003794D /* ViewModel */,
 			);
 			path = Base;
@@ -108,6 +110,16 @@
 				624E94B81F9A5BB90003794D /* ViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		624E94BA1F9A5D3C0003794D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6285C82E1EBD234E001130EF /* RegistrationViewController.swift */,
+				62DBDF6A1F98DFC000AAD19C /* ProfileViewController.swift */,
+				62DBDF6C1F98DFCF00AAD19C /* ProfileNavigationController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6285C8201EBD234E001130EF = {
@@ -134,11 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				624E94B61F9A5B890003794D /* Base */,
-				62495F131F993145002F66B1 /* Extensions */,
-				62DBDF641F98DF0A00AAD19C /* Xib */,
-				6285C8511EBD2F4F001130EF /* Model */,
-				6285C8501EBD2F3E001130EF /* ViewModel */,
-				6285C84F1EBD2F14001130EF /* View */,
+				62DBDF6E1F98E0DE00AAD19C /* Profile */,
 				6285C82C1EBD234E001130EF /* AppDelegate.swift */,
 				6285C8301EBD234E001130EF /* Main.storyboard */,
 				6285C8331EBD234E001130EF /* Assets.xcassets */,
@@ -162,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				62495F0E1F99160E002F66B1 /* ViewControllerFactory.swift */,
-				62DBDF691F98DF9E00AAD19C /* Profile */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,16 +177,10 @@
 		6285C8501EBD2F3E001130EF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				62DBDF6E1F98E0DE00AAD19C /* Profile */,
+				62DBDF6F1F98E0F500AAD19C /* ProfileNavigationViewModel.swift */,
+				62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		6285C8511EBD2F4F001130EF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		62DBDF641F98DF0A00AAD19C /* Xib */ = {
@@ -191,21 +192,12 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
-		62DBDF691F98DF9E00AAD19C /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				6285C82E1EBD234E001130EF /* RegistrationViewController.swift */,
-				62DBDF6A1F98DFC000AAD19C /* ProfileViewController.swift */,
-				62DBDF6C1F98DFCF00AAD19C /* ProfileNavigationController.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		62DBDF6E1F98E0DE00AAD19C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				62DBDF6F1F98E0F500AAD19C /* ProfileNavigationViewModel.swift */,
-				62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */,
+				62DBDF641F98DF0A00AAD19C /* Xib */,
+				624E94BA1F9A5D3C0003794D /* View */,
+				6285C8501EBD2F3E001130EF /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
