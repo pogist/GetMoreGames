@@ -17,6 +17,8 @@ target 'GetMoreGames' do
 
   pod 'Kingfisher', '~> 4.1'
   pod 'R.swift', '~> 4.0'
+
+  pod 'URLNavigator', '~> 2.0'
 end
 
 target 'GetMoreGamesTests' do
