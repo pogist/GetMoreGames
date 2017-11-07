@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41282D1DABCBC3AF91CBFC67 /* Pods_GetMoreGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A286B13A421B6A3B269F22C /* Pods_GetMoreGames.framework */; };
 		620D48C21FB1E75500B2E31A /* URLNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D48C11FB1E75500B2E31A /* URLNavigationMap.swift */; };
+		620D48C91FB247F500B2E31A /* ProfileViewController+Cartography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620D48C81FB247F500B2E31A /* ProfileViewController+Cartography.swift */; };
 		62389EA51F9A61EB005CA9D5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62389EA41F9A61EB005CA9D5 /* Profile.swift */; };
 		62389EA91F9A6888005CA9D5 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62389EA81F9A6888005CA9D5 /* GamesViewController.swift */; };
 		62495F0D1F9909D4002F66B1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		2A286B13A421B6A3B269F22C /* Pods_GetMoreGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetMoreGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		620D48C11FB1E75500B2E31A /* URLNavigationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLNavigationMap.swift; sourceTree = "<group>"; };
+		620D48C81FB247F500B2E31A /* ProfileViewController+Cartography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+Cartography.swift"; sourceTree = "<group>"; };
 		62389EA41F9A61EB005CA9D5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		62389EA81F9A6888005CA9D5 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		62495F0C1F9909D4002F66B1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		620D48C71FB247D700B2E31A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				620D48C81FB247F500B2E31A /* ProfileViewController+Cartography.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		62389EA31F9A61DC005CA9D5 /* Model */ = {
@@ -276,6 +286,7 @@
 		62DBDF6E1F98E0DE00AAD19C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				620D48C71FB247D700B2E31A /* Extensions */,
 				62DBDF641F98DF0A00AAD19C /* Xib */,
 				624E94BA1F9A5D3C0003794D /* View */,
 				6285C8501EBD2F3E001130EF /* ViewModel */,
@@ -574,6 +585,7 @@
 				62DBDF6B1F98DFC000AAD19C /* ProfileViewController.swift in Sources */,
 				6285C82F1EBD234E001130EF /* RegistrationViewController.swift in Sources */,
 				62495F151F993155002F66B1 /* UserProfile+Rx.swift in Sources */,
+				620D48C91FB247F500B2E31A /* ProfileViewController+Cartography.swift in Sources */,
 				620D48C21FB1E75500B2E31A /* URLNavigationMap.swift in Sources */,
 				62DBDF701F98E0F500AAD19C /* ProfileNavigationViewModel.swift in Sources */,
 				62389EA91F9A6888005CA9D5 /* GamesViewController.swift in Sources */,

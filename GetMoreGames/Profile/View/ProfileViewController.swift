@@ -32,27 +32,10 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupConstraints()
         
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.profilePicture.kf.setImage(with: nil, placeholder: R.image.placeholder())
-        
-        constrain(welcomeLabel, profilePicture) { view1, view2 in
-            view1.width == view1.superview!.width/2
-            view1.height == 21
-            view1.centerX == view1.superview!.centerX
-            
-            view2.width == 200
-            view2.height == 200
-            view2.centerX == view2.superview!.centerX
-            
-            view2.topMargin == view2.superview!.topMargin + 50
-            view1.topMargin == view2.bottomMargin + 40
-        }
-        
-        constrain(logOutButton) { view in
-            view.centerX == view.superview!.centerX
-            view.bottomMargin == view.superview!.bottomMargin - 50
-        }
         
         profileViewModel.currentState.asObservable()
             .subscribe(onNext: { [weak self] state in
