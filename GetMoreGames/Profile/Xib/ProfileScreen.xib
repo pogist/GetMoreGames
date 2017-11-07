@@ -27,6 +27,9 @@
                     <rect key="frame" x="161" y="573" width="52" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Log out"/>
+                    <connections>
+                        <action selector="didTapLogOut:" destination="-1" eventType="touchUpInside" id="ZZf-UH-S0k"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9L-gQ-5W1">
                     <rect key="frame" x="137" y="380" width="99" height="21"/>

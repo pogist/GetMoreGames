@@ -18,11 +18,23 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
     
-    let profileViewModel = ProfileViewModel()
+    let profileViewModel: ProfileViewModel
     let disposeBag = DisposeBag()
+    
+    init() {
+        self.profileViewModel = ProfileViewModel()
+        super.init(nibName: R.nib.profileScreen.name, bundle: R.nib.profileScreen.bundle)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("Coder not implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.profilePicture.kf.setImage(with: nil, placeholder: R.image.placeholder())
         
         constrain(welcomeLabel, profilePicture) { view1, view2 in
             view1.width == view1.superview!.width/2
@@ -41,44 +53,39 @@ class ProfileViewController: UIViewController {
             view.centerX == view.superview!.centerX
             view.bottomMargin == view.superview!.bottomMargin - 50
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        bindTo(viewModel: profileViewModel)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        bindTo(viewModel: profileViewModel)
-    }
-    
-    func bindTo(viewModel: ProfileViewModel) {
-        logOutButton.rx.tap.flatMap { Void -> Observable<Void> in
-            return viewModel.logOut()
-        }
-        .subscribe(onNext: { [weak self] in
-            let registrationViewController = RegistrationViewController.create()
-            self?.navigationController?.setViewControllers([registrationViewController], animated: true)
-        })
-        .disposed(by: disposeBag)
         
-        viewModel.name
-            .bind(to: welcomeLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        viewModel.picture
-            .subscribe(onNext: { [weak self] url in
-                self?.profilePicture.kf.setImage(with: url)
-            }, onError: { error in
-                print(error)
+        profileViewModel.currentState.asObservable()
+            .subscribe(onNext: { [weak self] state in
+                switch state {
+                case .success:
+                    self?.bindViewModel()
+                    
+                case .loading(_):
+                    print("Loading...")
+                    
+                case .idle:
+                    print("idle")
+                    
+                case .error(let error):
+                    print(error)
+                }
             })
             .disposed(by: disposeBag)
     }
-}
-
-extension ProfileViewController: ViewControllerFactory {
-    static func create() -> ProfileViewController {
-        return ProfileViewController(nibName: "ProfileScreen", bundle: Bundle.main)
+    
+    private func bindViewModel() {
+        self.profileViewModel.name.bind(to: welcomeLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        self.profileViewModel.picture.subscribe(onNext: { [weak self] url in
+            self?.profilePicture.kf.setImage(with: url)
+        })
+        .disposed(by: disposeBag)
+    }
+    
+    @IBAction func didTapLogOut(_ sender: UIButton) {
+        self.profileViewModel.logOut()
+        navigator.push("gmg://registration", animated: false)
     }
 }
+

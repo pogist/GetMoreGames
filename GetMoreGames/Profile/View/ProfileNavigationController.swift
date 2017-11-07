@@ -24,12 +24,12 @@ class ProfileNavigationController: UINavigationController {
             .disposed(by: disposeBag)
     }
     
-    func presentNextView(basedOn userLoginState: Bool) {
+    func presentNextView(userLoginState: Bool) {
         //endhud
         let nextViewController = (userLoginState)
-            ? ProfileViewController.create()
-            : RegistrationViewController.create()
-        
-        self.setViewControllers([nextViewController], animated: false)
+            ? "gmg://profile"
+            : "gmg://registration"
+
+        navigator.push(nextViewController, animated: false)
     }
 }

@@ -8,28 +8,46 @@
 
 import UIKit
 import RxSwift
-import RxCocoa
+import Moya
 import FacebookLogin
-import FacebookCore
 
-struct ProfileViewModel {
+final class ProfileViewModel: ViewModel {
     
-    var picture: Observable<URL> {
-        return UserProfile.user.map { $0.imageURLWith(.square, size: CGSize(width: 200, height: 200)) }
-    }
+    let facebookProvider = MoyaProvider<Facebook>()
+    let facebookProfile = Variable<Profile?>(nil)
     
-    var name: Observable<String> {
-        return UserProfile.user.map { $0.fullName! }
-    }
-    
-    func logOut() -> Observable<Void> {
-        return Observable.create { observer in
-            observer.onNext(LoginManager().logOut())
-            observer.onCompleted()
-            
-            return Disposables.create()
+    override init() {
+        super.init()
+        
+        self.currentState.value = ViewModelState.infiniteLoading
+        
+        self.facebookProvider.request(.userProfile) { [weak self] response in
+            switch response {
+            case .success(let json):
+                self?.currentState.value = .success
+                self?.facebookProfile.value = try! Profile.from(jsonData: json.data)
+                
+            case .failure(let error):
+                self?.currentState.value = .error(error)
+            }
         }
-        .subscribeOn(MainScheduler.asyncInstance)
-        .observeOn(MainScheduler.instance)
+    }
+    
+    var picture: Observable<URL?> {
+        return facebookProfile.asObservable().flatMap { profile -> Observable<URL?> in
+            guard let profile = profile else { return .just(nil) }
+            return .just(profile.picture["data"]!.url)
+        }
+    }
+    
+    var name: Observable<String?> {
+        return facebookProfile.asObservable().flatMap { profile -> Observable<String?> in
+            guard let profile = profile else { return .just(nil) }
+            return .just(profile.name)
+        }
+    }
+    
+    func logOut() {
+        LoginManager().logOut()
     }
 }

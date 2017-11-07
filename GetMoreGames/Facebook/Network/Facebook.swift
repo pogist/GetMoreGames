@@ -16,7 +16,7 @@ enum Facebook {
     var fields: String {
         switch self {
         case .userProfile:
-            return ["id", "name", "email", "picture"].joined(separator: ",")
+            return ["id", "name", "email", "picture.type(large)"].joined(separator: ",")
         }
     }
     

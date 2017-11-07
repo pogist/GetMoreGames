@@ -8,6 +8,9 @@
 
 import UIKit
 import FacebookCore
+import URLNavigator
+
+let navigator = Navigator()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        URLNavigationMap.initialize(navigator: navigator)
+        
         return true
     }
     
